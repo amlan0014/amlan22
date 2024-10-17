@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabarkhol Tourists Donation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+        form {
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1a242f;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        .signature {
+            font-size: 18px;
+            font-style: italic;
+            display: none; /* Initially hidden */
+        }
+    </style>
+    <script>
+        function showWishes(event) {
+            event.preventDefault(); // Prevent form submission
+            document.querySelector('.message').style.display = 'block';
+            document.querySelector('.signature').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Dabarkhol Tourists Donation Page</h1>
+    <p class="warning">We welcome only fair-skinned people for this trip; dark-skinned people are not allowed.</p>
+    
+    <form onsubmit="showWishes(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" name="profession" required>
+
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification" required>
+
+        <input type="submit" value="PROCEED TO NEXT PAGE">
+    </form>
+
+    <div class="message">BEST OF LUCK FOR YOUR TRIP AS YOU ALL ARE FAIR COLOR GUYS SO NO DONATION</div>
+    <div class="signature">- Regards, Amlan Panda</div>
+
+</body>
+</html>

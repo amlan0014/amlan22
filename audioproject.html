@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        /* Hide the audio element */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>MY FRIEND SINGING FOR THE FIRST TIME
+    
+</h1>
+<button id="playButton">Play Audio</button>
+
+<audio id="audioPlayer">
+    <source src="C:\Users\Amlan\OneDrive\Desktop\Whatsapp audio" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    const audioElement = document.getElementById('audioPlayer');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+        audioElement.play().catch(error => {
+            console.error('Audio playback failed:', error);
+            alert('Playback failed. Check console for errors.');
+        });
+    });
+</script>
+
+</body>
+</html>
